@@ -1,4 +1,4 @@
-## Lama Hamadeh
+## Lama Hamadeh Lecturer in Engineering Mathematics and Computing Univeristy College London
 
 ### Lecturer in Engineering Mathematics and Computing
 
