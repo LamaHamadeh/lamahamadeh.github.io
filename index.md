@@ -1,5 +1,7 @@
 ## Lama Hamadeh
+
 Lecturer in Engineering Mathematics and Computing
+
 Univeristy College London
 
 You can use the [editor on GitHub](https://github.com/LamaHamadeh/lamahamadeh.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
