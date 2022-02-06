@@ -1,4 +1,5 @@
-## Lama Hamadeh
+## Lama Hamadeh  
+## Lecturer
 
 Lecturer in Engineering Mathematics and Computing
 
