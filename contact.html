@@ -3,10 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Contact | Dr. Lama Hamadeh</title>
     <meta name="description"
           content="Contact details and social media accounts for Dr. Lama Hamadeh.">
     <style>
+        /* ================= SOCIAL ICONS ================= */
+        .social-icons {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }       
+        .social-icons a {
+            width: 48px;
+            height: 48px;
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            background: #111827;
+            color: white;
+        
+            border-radius: 50%;
+        
+            text-decoration: none;
+        
+            font-size: 1.25rem;
+        
+            transition: all 0.2s ease;
+        }        
+        .social-icons a:hover {
+            background: #2563eb;
+            transform: translateY(-3px);
+        }
         /* ================= GENERAL ================= */
         * {
             box-sizing: border-box;
@@ -41,7 +73,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .site-title {
             color: white;
             text-decoration: none;
@@ -49,13 +80,11 @@
             font-weight: bold;
             letter-spacing: 0.5px;
         }
-
         .nav-links {
             list-style: none;
             display: flex;
             gap: 28px;
         }
-
         .nav-links a {
             color: white;
             text-decoration: none;
@@ -63,7 +92,6 @@
             font-size: 0.95rem;
             transition: color 0.2s ease;
         }
-
         .nav-links a:hover,
         .nav-links a.active {
             color: #93c5fd;
@@ -347,52 +375,36 @@
             <!-- ================= SOCIAL MEDIA ================= -->
             <div class="contact-section">
                 <h2>Connect with Me</h2>
-                <ul class="social-links">
-                    <li>
-                        <span class="social-name">
-                            LinkedIn
-                        </span>
-                        <a
-                            href="https://www.linkedin.com/in/lama-hamadeh-66514554/"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            LinkedIn Profile
-                        </a>
-                    </li>
-                    <li>
-                        <span class="social-name">
-                            GitHub
-                        </span>
-                        <a
-                            href="https://github.com/LamaHamadeh"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            GitHub Profile
-                        </a>
-                    </li>
-                    <li>
-                        <span class="social-name">
-                            Google Scholar
-                        </span>
-                        <a
-                            href="https://scholar.google.com/citations?user=yhM8IrsAAAAJ&hl=en"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Google Scholar Profile
-                        </a>
-                    </li>
-                    <li>
-                        <span class="social-name">
-                            X
-                        </span>
-                        <a
-                            href="https://x.com/DrLamaHamadeh?lang=en"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            @DrLamaHamadeh
-                        </a>
-                    </li>
-                </ul>
+                <div class="social-icons">             
+                    <a
+                        href="https://www.linkedin.com/in/lama-hamadeh-66514554/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>              
+                    <a
+                        href="https://github.com/LamaHamadeh"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>               
+                    <a
+                        href="https://scholar.google.com/citations?user=yhM8IrsAAAAJ&hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Google Scholar">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </a>               
+                    <a
+                        href="https://x.com/DrLamaHamadeh?lang=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>                
+                </div>
             </div>
         </section>
         <!-- ================= GOOGLE MAP ================= -->
