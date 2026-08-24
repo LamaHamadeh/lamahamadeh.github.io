@@ -1,0 +1,1065 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Publications | Dr. Lama Hamadeh</title>
+
+    <meta name="description"
+          content="Publications by Dr. Lama Hamadeh in engineering mathematics, mechanical engineering, smart textiles, machine learning and engineering education.">
+
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+            color: #222;
+            background: #ffffff;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #111827;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 18px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            color: white;
+            text-decoration: none;
+            font-size: 1.35rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #93c5fd;
+        }
+
+
+        /* ================= PAGE HEADER ================= */
+
+        .page-header {
+            background: #f4f6f8;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #4b5563;
+            font-size: 1.05rem;
+        }
+
+
+        /* ================= MAIN CONTAINER ================= */
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 65px 30px 80px;
+        }
+
+
+        /* ================= HIGHLIGHTS ================= */
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: normal;
+            color: #111827;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .section-introduction {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #4b5563;
+            margin-bottom: 35px;
+        }
+
+        .section-introduction a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .section-introduction a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= HIGHLIGHT GRID ================= */
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .publication-card {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 25px;
+
+            transition: transform 0.2s ease,
+                        box-shadow 0.2s ease;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* ================= PUBLICATION CARD IMAGE ================= */
+
+        .publication-top {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .publication-image {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .publication-title {
+            font-size: 1.25rem;
+            line-height: 1.4;
+            color: #111827;
+            font-weight: bold;
+        }
+
+
+        /* ================= PUBLICATION DETAILS ================= */
+
+        .publication-description {
+            margin-bottom: 18px;
+            color: #333;
+        }
+
+        .citation {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            color: #4b5563;
+            margin-bottom: 18px;
+        }
+
+        .citation a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .citation a:hover {
+            text-decoration: underline;
+        }
+
+        .significance {
+            background: #eef2ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+
+        .significance strong {
+            color: #111827;
+        }
+
+
+        /* ================= FULL PUBLICATION LIST ================= */
+
+        #full-list {
+            scroll-margin-top: 100px;
+        }
+
+        .full-publications {
+            margin-top: 20px;
+        }
+
+        .publication-list {
+            list-style: none;
+        }
+
+        .publication-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .publication-list li:last-child {
+            border-bottom: none;
+        }
+
+        .publication-list p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        .publication-list a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .publication-list a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #111827;
+            color: #d1d5db;
+            text-align: center;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 18px 15px;
+            }
+
+            .nav-links {
+                gap: 14px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+
+            .page-header {
+                padding: 50px 20px;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .main-container {
+                padding: 50px 20px 60px;
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .publication-top {
+                flex-direction: column;
+            }
+
+            .publication-image {
+                width: 100%;
+                height: 180px;
+            }
+
+            .publication-title {
+                font-size: 1.15rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="site-title">
+                Dr. Lama Hamadeh
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="teaching.html">
+                        Teaching
+                    </a>
+                </li>
+
+                <li>
+                    <a href="research.html">
+                        Research
+                    </a>
+                </li>
+
+                <li>
+                    <a href="students.html">
+                        Students
+                    </a>
+                </li>
+
+                <li>
+                    <a href="publications.html" class="active">
+                        Publications
+                    </a>
+                </li>
+
+                <li>
+                    <a href="outreach.html">
+                        Outreach
+                    </a>
+                </li>
+
+                <li>
+                    <a href="content.html">
+                        Content
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>Publications</h1>
+
+        <p>
+            Selected publications and research outputs
+        </p>
+
+    </section>
+
+
+    <main class="main-container">
+
+
+        <!-- ========================================================= -->
+        <!-- ====================== HIGHLIGHTS ======================= -->
+        <!-- ========================================================= -->
+
+        <section>
+
+            <h2 class="section-title">
+                Highlights
+            </h2>
+
+            <p class="section-introduction">
+
+                For a full list see
+                <a href="#full-list">
+                    below
+                </a>
+
+                or go to
+
+                <a
+                    href="https://scholar.google.com/citations?user=_NNNlvMAAAAJ&hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Google Scholar
+
+                </a>.
+
+            </p>
+
+
+            <!-- ================= 2 x 2 GRID ================= -->
+
+            <div class="highlight-grid">
+
+
+                <!-- ================================================= -->
+                <!-- PUBLICATION 1 -->
+                <!-- ================================================= -->
+
+                <article class="publication-card">
+
+                    <div class="publication-top">
+
+                        <img
+                            src="blood-droplets.jpg"
+                            alt="Dried blood droplet analysis"
+                            class="publication-image"
+                        >
+
+                        <h3 class="publication-title">
+                            Machine Learning Analysis for Quantitative
+                            Discrimination of Dried Blood Droplets
+                        </h3>
+
+                    </div>
+
+
+                    <p class="publication-description">
+
+                        Using an optimised machine learning algorithm
+                        to analyse and classify dried patterns from
+                        blood droplets.
+
+                    </p>
+
+
+                    <p class="citation">
+
+                        Hamadeh, L.; Imran, S.; Bencsik, M.; Sharpe, G. R.;
+                        Johnson, M. A.; Fairhurst, D. J. (2020).
+                        <em>
+                            Machine Learning Analysis for Quantitative
+                            Discrimination of Dried Blood Droplets.
+                        </em>
+                        <strong>Scientific Reports</strong>, 10,
+                        Article 3313.
+
+                        <a
+                            href="https://doi.org/10.1038/s41598-020-59847-x"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.1038/s41598-020-59847-x
+
+                        </a>
+
+                    </p>
+
+
+                    <div class="significance">
+
+                        <strong>Significance:</strong>
+
+                        The paper was featured in
+                        <a
+                            href="https://www.news-medical.net/news/20200228/Patterns-and-cracks-from-dried-blood-droplets-could-indicate-specific-health-conditions.aspx"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            News Medical Life Sciences
+
+                        </a>.
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================================================= -->
+                <!-- PUBLICATION 2 -->
+                <!-- ================================================= -->
+
+                <article class="publication-card">
+
+                    <div class="publication-top">
+
+                        <img
+                            src="smart-textiles.jpg"
+                            alt="Smart textile thermal characterisation"
+                            class="publication-image"
+                        >
+
+                        <h3 class="publication-title">
+
+                            Towards reliable smart textiles:
+                            Investigating thermal characterisation
+                            of embedded electronics in E-Textiles
+                            using infrared thermography and
+                            mathematical modelling
+
+                        </h3>
+
+                    </div>
+
+
+                    <p class="publication-description">
+
+                        Infrared thermographic imaging technology is
+                        utilised to experimentally study the thermal
+                        distribution profile of LEDs in their bare,
+                        encapsulated and embedded state in e-yarns
+                        manufacturing stages. The experimental results
+                        are compared with numerical analysis models
+                        solving the time-dependent partial differential
+                        equations of the heat transfer process.
+
+                    </p>
+
+
+                    <p class="citation">
+
+                        Hamadeh, Lama; Al-Habaibeh, Amin (2022).
+                        <em>
+                            Towards reliable smart textiles:
+                            Investigating thermal characterisation of
+                            embedded electronics in E-Textiles using
+                            infrared thermography and mathematical
+                            modelling.
+                        </em>
+                        <strong>
+                            Sensors and Actuators A: Physical
+                        </strong>, 338, Article 113501.
+
+                        <a
+                            href="https://doi.org/10.1016/j.sna.2022.113501"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.1016/j.sna.2022.113501
+
+                        </a>
+
+                    </p>
+
+
+                    <div class="significance">
+
+                        <strong>Significance:</strong>
+
+                        The study combines experimental infrared
+                        thermography with mathematical modelling to
+                        investigate thermal behaviour in E-Textiles.
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================================================= -->
+                <!-- PUBLICATION 3 -->
+                <!-- ================================================= -->
+
+                <article class="publication-card">
+
+                    <div class="publication-top">
+
+                        <img
+                            src="nottingham-playhouse.jpg"
+                            alt="Nottingham Playhouse heritage building"
+                            class="publication-image"
+                        >
+
+                        <h3 class="publication-title">
+
+                            Enhancing the sustainability and energy
+                            conservation in heritage buildings:
+                            The case of Nottingham Playhouse
+
+                        </h3>
+
+                    </div>
+
+
+                    <p class="publication-description">
+
+                        A novel methodology was developed to improve
+                        the energy performance of heritage buildings,
+                        demonstrated using infrared thermographic
+                        images and data logger sensors to identify
+                        significant energy savings.
+
+                    </p>
+
+
+                    <p class="citation">
+
+                        Al-Habaibeh, A.; Hawas, A.; Hamadeh, L.;
+                        Medjdoub, B.; Marsh, J.; Sen, A. (2021).
+                        <em>
+                            Enhancing the sustainability and energy
+                            conservation in heritage buildings:
+                            The case of Nottingham Playhouse.
+                        </em>
+                        <strong>
+                            Frontiers of Architectural Research
+                        </strong>.
+
+                        <a
+                            href="https://doi.org/10.1016/j.foar.2021.09.001"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.1016/j.foar.2021.09.001
+
+                        </a>
+
+                    </p>
+
+
+                    <div class="significance">
+
+                        <strong>Significance:</strong>
+
+                        The paper was awarded the
+                        <strong>
+                            Frontiers of Architectural Research
+                            Best Paper in 2022
+                        </strong>.
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================================================= -->
+                <!-- PUBLICATION 4 -->
+                <!-- ================================================= -->
+
+                <article class="publication-card">
+
+                    <div class="publication-top">
+
+                        <img
+                            src="generative-ai.jpg"
+                            alt="Generative AI in engineering education"
+                            class="publication-image"
+                        >
+
+                        <h3 class="publication-title">
+
+                            Exploring the Utilisation of Generative AI
+                            Tools by Undergraduate First-Year Mechanical
+                            Engineering Students in Programming Assessments
+
+                        </h3>
+
+                    </div>
+
+
+                    <p class="publication-description">
+
+                        This paper investigates first-year undergraduate
+                        mechanical engineering students' use of
+                        Generative AI tools in their programming assessment.
+
+                    </p>
+
+
+                    <p class="citation">
+
+                        Hamadeh, Lama (2024).
+                        <em>
+                            Exploring the Utilisation of Generative AI
+                            Tools by Undergraduate First-Year Mechanical
+                            Engineering Students in Programming Assessments.
+                        </em>
+                        <strong>
+                            SEFI Journal of Engineering Education Advancement
+                        </strong>, 1(1), pp. 39–52.
+
+                        <a
+                            href="https://doi.org/10.62492/sefijeea.v1i1.20"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.62492/sefijeea.v1i1.20
+
+                        </a>
+
+                    </p>
+
+
+                    <div class="significance">
+
+                        <strong>Significance:</strong>
+
+                        The paper examines how first-year mechanical
+                        engineering students use Generative AI tools
+                        within programming assessments.
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================================= -->
+        <!-- ================= FULL PUBLICATION LIST ================= -->
+        <!-- ========================================================= -->
+
+        <section id="full-list" class="full-publications">
+
+            <h2 class="section-title">
+                Full List of Publications
+            </h2>
+
+
+            <ol class="publication-list">
+
+
+                <!-- 2026 -->
+
+                <li>
+
+                    <p>
+
+                        <strong>Hamadeh, L.</strong> &amp; Chappell, D.
+                        (2026).
+                        <em>
+                            Data-driven approximation of high-frequency
+                            vibrational energy distributions: A transfer
+                            operator approach.
+                        </em>
+                        INTERNOISE 2026 conference proceedings,
+                        Adelaide, Australia.
+
+                        <a
+                            href="https://alloccasionsgroup.sharefile.com/share/view/s362407441ac742398fdba0114d3c6970/fo80eda2-eaad-4fc5-97de-fdb43ae741ad"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Conference proceedings
+
+                        </a>
+
+                    </p>
+
+                </li>
+
+
+                <!-- 2024 -->
+
+                <li>
+
+                    <p>
+
+                        <strong>Hamadeh, L.</strong> (2024).
+                        <em>
+                            Exploring the Utilisation of Generative AI
+                            Tools by Undergraduate Mechanical Engineering
+                            Students in Programming Assessments.
+                        </em>
+                        SEFI Journal of Engineering Education Advancement,
+                        1(1), pp. 39–52.
+
+                        doi:
+                        <a
+                            href="https://doi.org/10.62492/sefijeea.v1i1.20"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.62492/sefijeea.v1i1.20
+
+                        </a>
+
+                    </p>
+
+                </li>
+
+
+                <!-- 2023 -->
+
+                <li>
+
+                    <p>
+
+                        <strong>Hamadeh, L.</strong> (2023).
+                        <em>
+                            Integrating Python into Mechanical Engineering
+                            Undergraduate Curriculum.
+                        </em>
+                        In
+                        <em>
+                            Transforming Engineering Education 2023:
+                            9th International Research Symposium on
+                            Problem-Based Learning (PBL).
+                        </em>
+                        Cambridge, MA, USA:
+                        Aalborg University Press.
+
+                        Retrieved from
+
+                        <a
+                            href="https://www.tee2023.mit.edu/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Transforming Engineering Education 2023
+
+                        </a>
+
+                    </p>
+
+                </li>
+
+
+                <!-- 2023 -->
+
+                <li>
+
+                    <p>
+
+                        Al-Habaibeh, A.,
+                        <strong>Hamadeh, L.</strong>, &amp; McCague, J.
+                        (2023).
+                        <em>
+                            Experimental study for evaluating the response
+                            of the power take-off of a point absorber wave
+                            energy generation system using a hydraulic wave
+                            simulator.
+                        </em>
+                        <strong>Ocean Engineering</strong>, 281.
+
+                        doi:
+                        <a
+                            href="https://doi.org/10.1016/j.oceaneng.2023.114906"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.1016/j.oceaneng.2023.114906
+
+                        </a>
+
+                    </p>
+
+                </li>
+
+
+                <!-- 2022 -->
+
+                <li>
+
+                    <p>
+
+                        <strong>Hamadeh, L.</strong>, &amp;
+                        Al-Habaibeh, A. (2022).
+                        <em>
+                            Towards Reliable Smart Textiles:
+                            Investigating Thermal Characterisation of
+                            Embedded Electronics in E-Textiles Using
+                            Infrared Thermography and Mathematical Modelling.
+                        </em>
+                        <strong>
+                            Sensors and Actuators A: Physical
+                        </strong>, 113501.
+
+                        doi:
+                        <a
+                            href="https://doi.org/10.1016/j.sna.2022.113501"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.1016/j.sna.2022.113501
+
+                        </a>
+
+                    </p>
+
+                </li>
+
+
+                <!-- 2021 -->
+
+                <li>
+
+                    <p>
+
+                        Al-Habaibeh, A., Hawas, A.,
+                        <strong>Hamadeh, L.</strong>, Medjdoub, B.,
+                        Marsh, J., &amp; Sen, A. (2021).
+                        <em>
+                            Enhancing the sustainability and energy
+                            conservation in heritage buildings:
+                            The case of Nottingham Playhouse.
+                        </em>
+                        <strong>
+                            Frontiers of Architectural Research
+                        </strong>.
+
+                        doi:
+                        <a
+                            href="https://doi.org/10.1016/j.foar.2021.09.001"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.1016/j.foar.2021.09.001
+
+                        </a>
+
+                    </p>
+
+                </li>
+
+
+                <!-- 2020 -->
+
+                <li>
+
+                    <p>
+
+                        <strong>Hamadeh, L.</strong>, Imran, S.,
+                        Bencsik, M., Sharpe, G. R., Johnson, M. A.,
+                        &amp; Fairhurst, D. J. (2020).
+                        <em>
+                            Machine Learning Analysis for Quantitative
+                            Discrimination of Dried Blood Droplets.
+                        </em>
+                        <strong>
+                            Scientific Reports
+                        </strong>, 10.
+
+                        doi:
+                        <a
+                            href="https://doi.org/10.1038/s41598-020-59847-x"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.1038/s41598-020-59847-x
+
+                        </a>
+
+                    </p>
+
+                </li>
+
+
+                <!-- 2012 -->
+
+                <li>
+
+                    <p>
+
+                        Li, W.,
+                        <strong>Hamadeh, L.</strong>, &amp;
+                        Lesanovsky, I. (2012).
+                        <em>
+                            Probing the interaction between Rydberg-dressed
+                            atoms through interference.
+                        </em>
+                        <strong>
+                            Physical Review A
+                        </strong>, 85(5).
+
+                        doi:
+                        <a
+                            href="https://doi.org/10.1103/physreva.85.053615"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            10.1103/physreva.85.053615
+
+                        </a>
+
+                    </p>
+
+                </li>
+
+
+            </ol>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Dr. Lama Hamadeh
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
