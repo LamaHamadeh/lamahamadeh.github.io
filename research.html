@@ -75,7 +75,7 @@ left: 0;
 width: 100%;
 height: 100%;
 object-fit: cover;
-object-position: center 60%;
+object-position: center 30%;
 filter: blur(1px);
 transform: scale(1.05);
 z-index: 0;
@@ -117,10 +117,29 @@ border-bottom: 2px solid #e5e7eb;
 .research-interests {
 margin-bottom: 75px;
 }
-.research-interests p {
+.research-interests-grid {
+display: grid;
+grid-template-columns: 1.5fr 1fr;
+gap: 50px;
+align-items: center;
+}
+.research-interests-text {
+width: 100%;
+}
+.research-interests-text p {
 font-size: 1.05rem;
 margin-bottom: 22px;
 color: #333;
+}
+.research-interests-image {
+text-align: center;
+}
+.research-interests-image img {
+width: 100%;
+max-width: 500px;
+height: auto;
+border-radius: 8px;
+box-shadow: 0 5px 18px rgba(0,0,0,0.15);
 }
 .research-list {
 margin-left: 25px;
@@ -237,6 +256,13 @@ padding: 50px 20px 60px;
 .section-title {
 font-size: 1.7rem;
 }
+.research-interests-grid {
+grid-template-columns: 1fr;
+gap: 30px;
+}
+.research-interests-image {
+order: 2;
+}
 .current-research-gif {
 float: none;
 width: 100%;
@@ -275,6 +301,8 @@ width: 100%;
 <main class="main-container">
 <section class="research-interests">
 <h2 class="section-title">Research Interests</h2>
+<div class="research-interests-grid">
+<div class="research-interests-text">
 <p>My research spans multiple interdisciplinary fields, with a core focus on integrating scientific computing, image processing, dimensionality reduction, and machine learning to enable data-driven discovery and control of complex dynamical systems.</p>
 <p>In fluid dynamics, my work includes classifying dried blood droplets using an optimised supervised learning approach. Other areas of application involve modelling the stochastic propagation of phase-space densities, renewable energy systems, and smart textiles.</p>
 <p>I have also supervised a wide range of research projects across various departments, including Physics, Mathematics, and Mechanical Engineering, all aimed at extracting meaningful insights from scientific and engineering systems using data-driven techniques.</p>
@@ -286,6 +314,11 @@ width: 100%;
 <li>Machine Learning for Prediction and Optimisation</li>
 <li>Image Processing and Analysis</li>
 </ul>
+</div>
+<div class="research-interests-image">
+<img src="PresentingResearch.jpg" alt="Presenting Research">
+</div>
+</div>
 </section>
 <section class="current-research">
 <h2 class="section-title">Current Research</h2>
