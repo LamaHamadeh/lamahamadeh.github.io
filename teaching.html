@@ -65,20 +65,53 @@
             color: #93c5fd;
         }
         /* ================= PAGE HEADER ================= */
-        .page-header {
-            background: #f4f6f8;
-            padding: 60px 30px;
+                .page-header {
+            position: relative;
+            height: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            overflow: hidden;
+            color: white;
         }
+        /* Blurred background image */
+        .page-header::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;        
+            background-image: url("TeachingBanner.jpg");
+            background-size: cover;
+            background-position: center;        
+            filter: blur(5px);
+            transform: scale(1.05);        
+            z-index: 0;
+        }       
+        /* Dark transparent layer over the image */
+        .page-header::after {
+            content: "";
+            position: absolute;
+            inset: 0;        
+            background: rgba(0, 0, 0, 0.35);        
+            z-index: 1;
+        }        
+        /* Text sits above the image */
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }        
         .page-header h1 {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             font-weight: normal;
-            color: #111827;
-            margin-bottom: 10px;
-        }
+            color: white;
+            margin-bottom: 8px;
+        }        
         .page-header p {
             font-family: Arial, Helvetica, sans-serif;
-            color: #4b5563;
+            color: white;
             font-size: 1.05rem;
         }
         /* ================= MAIN CONTAINER ================= */
@@ -238,7 +271,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
         }
         /* ================= FOOTER ================= */
-
         footer {
             background: #111827;
             color: #d1d5db;
@@ -344,7 +376,9 @@
     </header>
     <!-- ================= PAGE HEADER ================= -->
     <section class="page-header">
+    <div class="page-header-content">
         <h1>Teaching</h1>
+    </div>
     </section>
     <main class="main-container">
         <!-- ========================================================= -->
