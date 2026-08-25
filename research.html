@@ -212,7 +212,7 @@
         }
         .current-research-grid {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: center;
         }
@@ -223,9 +223,9 @@
         .current-research-image-container {
             text-align: center;
         }
-        .current-research-image {
+           .current-research-image {
             width: 100%;
-            max-width: 450px;
+            max-width: 600px;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
@@ -256,14 +256,15 @@
         .funding-item:last-child {
             border-bottom: none;
         }
-        .funding-item h3 {
-            font-size: 1.15rem;
+       .funding-item h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
             color: #111827;
             margin-bottom: 10px;
         }
         .funding-item p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.96rem;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.05rem;
             line-height: 1.7;
         }
         .funding-item a {
@@ -382,9 +383,6 @@
         >
         <div class="page-header-content">
             <h1>Research</h1>
-            <p>
-                Research interests, current research and PhD supervision
-            </p>
         </div>
     </section>
     <main class="main-container">
@@ -395,170 +393,6 @@
             <h2 class="section-title">
                 Research Interests
             </h2>
-            <div class="research-grid">
-                <!-- ================= BLOOD DROPLETS ================= -->
-                <article class="research-card">
-                    <img
-                        src="BloodDroplets.jpg"
-                        alt="Dried blood droplet research"
-                        class="research-card-image"
-                    >
-                    <div class="research-card-content">
-                        <h3>
-                            Machine Learning and Image Analysis of
-                            Dried Blood Droplets
-                        </h3>
-                        <p>
-                            One of the most interesting and everyday natural
-                            phenomena is the formation of different patterns
-                            after the evaporation of liquid droplets on a
-                            solid surface. The analysis of dried patterns
-                            from blood droplets has gained significant
-                            attention, both experimentally and theoretically,
-                            due to its potential applications in diagnostic
-                            medicine and forensic science.
-                        </p>
-                        <p>
-                            This work presents evidence that images of dried
-                            blood droplets contain a signature revealing the
-                            exhaustion level of an individual, providing an
-                            entirely novel approach to studying human dried
-                            blood droplet patterns. Blood samples were taken
-                            from 30 healthy young male volunteers before and
-                            after exhaustive exercise, and 1800 images of
-                            dried blood droplets were objectively and
-                            quantitatively analysed.
-                        </p>
-                        <p>
-                            Sophisticated image-processing routines and an
-                            optimised multivariate statistical machine
-                            learning algorithm were developed. The approach
-                            combines Principal Component Analysis (PCA) as
-                            an unsupervised learning method with Linear
-                            Discriminant Analysis (LDA) as a supervised
-                            learning method. When applied to the logarithmic
-                            power spectrum of the images, the approach
-                            achieved up to 95% prediction accuracy in
-                            discriminating physiological conditions before
-                            and after physical exercise.
-                        </p>
-                        <p>
-                            Having demonstrated this proof-of-principle,
-                            the methodology has potential applications in
-                            identifying diseases through the analysis of
-                            dried blood droplet patterns.
-                        </p>
-                        <p class="citation">
-                            Hamadeh, L., Imran, S., Bencsik, M.
-                            <em>et al.</em> (2020).
-                            <em>
-                                Machine Learning Analysis for Quantitative
-                                Discrimination of Dried Blood Droplets.
-                            </em>
-                            <strong>Scientific Reports</strong>, 10, 3313.
-                            <br>
-                            <a
-                                href="https://doi.org/10.1038/s41598-020-59847-x"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                https://doi.org/10.1038/s41598-020-59847-x
-                            </a>
-                            <br>
-                            <a
-                                href="https://www.nature.com/articles/s41598-020-59847-x"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Read the full article
-                            </a>
-                        </p>
-                    </div>
-                </article>
-                <!-- ================= SMART TEXTILES ================= -->
-                <article class="research-card">
-                    <img
-                        src="SmartTextiles.jpg"
-                        alt="Smart textiles research"
-                        class="research-card-image"
-                    >
-                    <div class="research-card-content">
-                        <h3>
-                            Smart Textiles, Thermal Characterisation
-                            and Mathematical Modelling
-                        </h3>
-                        <p>
-                            The smart textiles field, including e-textiles,
-                            has seen rapid development in recent years due
-                            to its wide range of applications in areas such
-                            as wearables, architecture, energy and product
-                            design. Electronic circuits in e-textiles
-                            involve devices such as LEDs, sensors and
-                            batteries embedded within yarns.
-                        </p>
-                        <p>
-                            Since temperature can cause significant problems
-                            for electronic devices when it exceeds a certain
-                            threshold, understanding and controlling thermal
-                            behaviour is essential for improving the
-                            sustainability and reliability of embedded
-                            devices.
-                        </p>
-                        <p>
-                            In this work, infrared thermographic imaging
-                            technology was used to experimentally study the
-                            thermal distribution profile of LEDs in their
-                            bare, encapsulated and embedded states during
-                            e-yarn manufacturing. Experimental results were
-                            compared with numerical models based on the
-                            time-dependent partial differential equations
-                            governing heat transfer.
-                        </p>
-                        <p>
-                            The results demonstrate that infrared
-                            thermography can provide significant information
-                            about the thermal behaviour of smart textiles.
-                            The thermal distribution of integrated LEDs was
-                            found to have a Gaussian-like shape, with the
-                            distance between multiple LEDs playing an
-                            important role in determining the overall
-                            temperature distribution.
-                        </p>
-                        <p>
-                            The results also demonstrate that the cover yarn
-                            can influence heat dissipation, making the
-                            selection of yarn material and structure an
-                            important factor in the thermal performance of
-                            electronic devices embedded within e-textiles.
-                        </p>
-                        <p class="citation">
-                            Hamadeh, L. &amp; Al-Habaibeh, A. (2022).
-                            <em>
-                                Towards reliable smart textiles:
-                                Investigating thermal characterisation of
-                                embedded electronics in E-Textiles using
-                                infrared thermography and mathematical
-                                modelling.
-                            </em>
-                            <strong>
-                                Sensors and Actuators A: Physical
-                            </strong>, 338, 113501.
-                            <br>
-                            <a
-                                href="https://doi.org/10.1016/j.sna.2022.113501"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                https://doi.org/10.1016/j.sna.2022.113501
-                            </a>
-                            <br>
-                            <a
-                                href="https://www.sciencedirect.com/science/article/pii/S092442472200139X?via%3Dihub"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Read the full article
-                            </a>
-                        </p>
-                    </div>
-                </article>
-            </div>
             <!-- ================= RESEARCH OVERVIEW ================= -->
             <div class="research-overview">
                 <p>
