@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students | Dr. Lama Hamadeh</title>
+<meta name="description" content="Students and research projects supervised by Dr. Lama Hamadeh.">
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: Georgia, "Times New Roman", serif;
+line-height: 1.7;
+color: #222;
+background: #ffffff;
+}
+header {
+background: #111827;
+color: white;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.navbar {
+max-width: 1200px;
+margin: 0 auto;
+padding: 18px 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.site-title {
+color: white;
+text-decoration: none;
+font-size: 1.35rem;
+font-weight: bold;
+letter-spacing: 0.5px;
+}
+.nav-links {
+list-style: none;
+display: flex;
+gap: 28px;
+}
+.nav-links a {
+color: white;
+text-decoration: none;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 0.95rem;
+transition: color 0.2s ease;
+}
+.nav-links a:hover,
+.nav-links a.active {
+color: #93c5fd;
+}
+.page-header {
+position: relative;
+height: 280px;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+background: #111827;
+}
+.page-header::after {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.25);
+}
+.page-header-content {
+position: relative;
+z-index: 2;
+color: white;
+}
+.page-header h1 {
+font-size: 3.2rem;
+font-weight: normal;
+color: white;
+}
+.main-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 65px 30px 80px;
+}
+.section-title {
+font-size: 2rem;
+font-weight: normal;
+color: #111827;
+margin-bottom: 35px;
+padding-bottom: 10px;
+border-bottom: 2px solid #e5e7eb;
+}
+.main-section {
+margin-bottom: 80px;
+}
+.institution {
+margin-bottom: 55px;
+}
+.institution-title {
+font-size: 1.35rem;
+font-weight: normal;
+color: #111827;
+margin-bottom: 30px;
+padding-left: 15px;
+border-left: 4px solid #2563eb;
+}
+.year-group {
+margin-bottom: 40px;
+}
+.year-title {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.05rem;
+font-weight: bold;
+color: #374151;
+margin-bottom: 18px;
+}
+.student-list {
+list-style: none;
+margin-left: 0;
+}
+.student-item {
+padding: 14px 20px;
+margin-bottom: 10px;
+background: #f8fafc;
+border-left: 3px solid #e5e7eb;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 0.98rem;
+line-height: 1.65;
+}
+.student-item:hover {
+border-left-color: #2563eb;
+}
+.student-name {
+font-weight: bold;
+color: #111827;
+}
+.project-title {
+font-style: italic;
+color: #333;
+}
+.student-type {
+font-size: 0.9rem;
+color: #555;
+}
+.award {
+display: inline-block;
+margin-top: 6px;
+font-size: 0.88rem;
+font-weight: bold;
+color: #2563eb;
+}
+footer {
+background: #111827;
+color: #d1d5db;
+text-align: center;
+padding: 30px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 0.9rem;
+}
+footer p {
+margin: 0;
+}
+@media (max-width: 850px) {
+.navbar {
+flex-direction: column;
+gap: 15px;
+padding: 18px 15px;
+}
+.nav-links {
+gap: 14px;
+flex-wrap: wrap;
+justify-content: center;
+}
+.nav-links a {
+font-size: 0.85rem;
+}
+.page-header {
+height: 220px;
+}
+.page-header h1 {
+font-size: 2.3rem;
+}
+.main-container {
+padding: 50px 20px 60px;
+}
+.section-title {
+font-size: 1.7rem;
+}
+.institution-title {
+font-size: 1.2rem;
+}
+.student-item {
+padding: 13px 15px;
+}
+}
+</style>
+</head>
+<body>
+<header>
+<nav class="navbar">
+<a href="index.html" class="site-title">Dr. Lama Hamadeh</a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="teaching.html">Teaching</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="students.html" class="active">Students</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="outreach.html">Outreach</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<section class="page-header">
+<div class="page-header-content">
+<h1>Students</h1>
+</div>
+</section>
+<main class="main-container">
+<section class="main-section">
+<h2 class="section-title">Undergraduate Students</h2>
+<div class="institution">
+<h3 class="institution-title">Mathematics Department, Nottingham Trent University</h3>
+<div class="year-group">
+<h4 class="year-title">2019 – 2020</h4>
+<ul class="student-list">
+<li class="student-item"><span class="student-name">Jialin Zhou</span> — <span class="project-title">“Independent Component Analysis for Image Separation”</span></li>
+<li class="student-item"><span class="student-name">Oliver Baxter</span> — <span class="project-title">“Stability Analysis of Time-Ste
