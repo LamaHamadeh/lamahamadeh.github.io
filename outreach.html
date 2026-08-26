@@ -80,68 +80,64 @@ font-weight: normal;
 color: white;
 }
 .main-container {
-max-width: 1250px;
+max-width: 1200px;
 margin: 0 auto;
 padding: 65px 30px 80px;
 }
-.outreach-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 30px;
+.outreach-list {
+display: flex;
+flex-direction: column;
+gap: 55px;
 }
-.outreach-card {
+.outreach-event {
+display: grid;
+grid-template-columns: 42% 58%;
 background: #f8fafc;
 border: 1px solid #e5e7eb;
 border-radius: 8px;
 overflow: hidden;
 box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-display: flex;
-flex-direction: column;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.outreach-card:hover {
-transform: translateY(-4px);
-box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-}
-.outreach-image {
+.outreach-event-image {
 width: 100%;
-height: 220px;
+height: 100%;
+min-height: 350px;
 object-fit: cover;
 display: block;
 }
-.outreach-content {
-padding: 25px;
-flex: 1;
+.outreach-event-content {
+padding: 35px 40px;
 }
-.outreach-content h2 {
-font-size: 1.35rem;
+.outreach-event-content h2 {
+font-size: 1.65rem;
 font-weight: normal;
 line-height: 1.35;
 color: #111827;
-margin-bottom: 18px;
+margin-bottom: 22px;
 }
-.outreach-content p {
-font-size: 0.96rem;
-margin-bottom: 15px;
+.outreach-event-content p {
+font-size: 1rem;
+margin-bottom: 16px;
 }
-.outreach-content strong {
+.outreach-event-content strong {
 color: #111827;
 }
-.outreach-content a {
+.outreach-event-content a {
 color: #2563eb;
 text-decoration: none;
 word-break: break-word;
 }
-.outreach-content a:hover {
+.outreach-event-content a:hover {
 text-decoration: underline;
 }
 .video-container {
 position: relative;
 width: 100%;
 aspect-ratio: 16 / 9;
-margin-bottom: 20px;
+margin-top: 25px;
 overflow: hidden;
 background: #000;
+border-radius: 6px;
 }
 .video-container iframe {
 width: 100%;
@@ -150,13 +146,7 @@ border: 0;
 display: block;
 }
 .instagram-link {
-display: inline-block;
-margin-top: 8px;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 0.92rem;
-}
-.empty-card {
-visibility: hidden;
+margin-top: 20px;
 }
 footer {
 background: #111827;
@@ -169,12 +159,7 @@ font-size: 0.9rem;
 footer p {
 margin: 0;
 }
-@media (max-width: 1000px) {
-.outreach-grid {
-grid-template-columns: repeat(2, 1fr);
-}
-}
-@media (max-width: 700px) {
+@media (max-width: 850px) {
 .navbar {
 flex-direction: column;
 gap: 15px;
@@ -197,11 +182,26 @@ font-size: 2.3rem;
 .main-container {
 padding: 50px 20px 60px;
 }
-.outreach-grid {
+.outreach-event {
 grid-template-columns: 1fr;
 }
-.empty-card {
-display: none;
+.outreach-event-image {
+height: 300px;
+min-height: 0;
+}
+.outreach-event-content {
+padding: 28px 25px;
+}
+}
+@media (max-width: 500px) {
+.outreach-event-image {
+height: 230px;
+}
+.outreach-event-content {
+padding: 25px 20px;
+}
+.outreach-event-content h2 {
+font-size: 1.4rem;
 }
 }
 </style>
@@ -227,10 +227,10 @@ display: none;
 </div>
 </section>
 <main class="main-container">
-<div class="outreach-grid">
-<article class="outreach-card">
-<img src="PhysicsIsNature_Insta.jpg" alt="Physics Is Nature Instagram page" class="outreach-image">
-<div class="outreach-content">
+<div class="outreach-list">
+<article class="outreach-event">
+<img src="PhysicsIsNature_Insta.jpg" alt="Physics Is Nature Instagram page" class="outreach-event-image">
+<div class="outreach-event-content">
 <h2>Physics Is Nature – Instagram Page</h2>
 <p><strong>Aims of the page:</strong></p>
 <p>• Deliver and simplify physics ideas, methods, theories and facts.</p>
@@ -239,37 +239,37 @@ display: none;
 <p class="instagram-link"><strong>Instagram:</strong><br><a href="https://www.instagram.com/physics_is_nature" target="_blank" rel="noopener noreferrer">www.instagram.com/physics_is_nature</a></p>
 </div>
 </article>
-<article class="outreach-card">
-<img src="IoP_3MinWonder.jpg" alt="IOP 3 Minute Wonder" class="outreach-image">
-<div class="outreach-content">
+<article class="outreach-event">
+<img src="IoP_3MinWonder.jpg" alt="IOP 3 Minute Wonder" class="outreach-event-image">
+<div class="outreach-event-content">
 <h2>IOP 3 Minute Wonder</h2>
 <p><strong>IOP 3 Minute Wonder</strong> is the national science communication competition hosted by the Institute of Physics (IOP).</p>
-<p><strong>Achievement:</strong> Winner of the East Midlands branch and UK finalist in the final round of the competition, which took place at The Royal Institution in London.</p>
+<p><strong>Achievement:</strong> Winner of the East Midlands branch and UK finalist in the final round of the competition that took place at The Royal Institution in London.</p>
 <p><strong>Talk title:</strong> The exciting world of smart textiles.</p>
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/N7aUI3sVxOw" title="The exciting world of smart textiles" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </div>
 </article>
-<article class="outreach-card">
-<img src="IoP_GirlGuiding.jpg" alt="Meet a Physicist event" class="outreach-image">
-<div class="outreach-content">
+<article class="outreach-event">
+<img src="IoP_GirlGuiding.jpg" alt="Meet a Physicist event" class="outreach-event-image">
+<div class="outreach-event-content">
 <h2>Meet a Physicist</h2>
 <p>Online event hosted by the Institute of Physics (IOP) East Midlands.</p>
 <p><strong>Role:</strong> Member of a panel that consisted of three other female academics.</p>
-<p><strong>Indicator of Impact:</strong> Engagement with a national working group involving the IOP and Girlguiding Nottinghamshire.</p>
-<p><strong>Audience:</strong> Girls and young women, primarily in school, aged 7 to 15 years old.</p>
+<p><strong>Indicator of Impact:</strong> Engagement with a national working group, i.e. IOP and Girlguiding Nottinghamshire.</p>
+<p><strong>Audience:</strong> Girls and young women, primarily in school, of age range 7 years old to 15 years old.</p>
 <div class="video-container">
-<iframe src="https://rb.gy/2ppvhl" title="Meet a Physicist event" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/_82khwLgVfc?list=PLBpUCXeYUyITiZhBzz4LtDbdxC0NkskOg&index=13" title="Meet a Physicist event" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </div>
 </article>
-<article class="outreach-card">
-<img src="SpringIntoSTEMUCL.jpg" alt="Spring into STEM at UCL Engineering" class="outreach-image">
-<div class="outreach-content">
+<article class="outreach-event">
+<img src="SpringIntoSTEMUCL.jpg" alt="Spring into STEM at UCL Engineering" class="outreach-event-image">
+<div class="outreach-event-content">
 <h2>Spring into STEM</h2>
-<p><strong>Event:</strong> Online lecture hosted by UCL Engineering. This lecture was part of a series of virtual lectures showcasing world-changing STEM research from across UCL Engineering departments.</p>
-<p><strong>Role:</strong> Providing a presentation about my research and answering questions from students interested in applying to UCL.</p>
+<p><strong>Event:</strong> Online lecture hosted by UCL Engineering. This lecture was part of a series of virtual lectures that aim to showcase the world-changing STEM research from across UCL Engineering departments.</p>
+<p><strong>Role:</strong> Providing a presentation talking about my research and answering questions from students who would like to apply to UCL.</p>
 <p><strong>Audience:</strong> High school students interested in joining the Mechanical Engineering Department.</p>
 <p><strong>Talk title:</strong> Machine Learning as a Potential Tool for Disease Diagnosis.</p>
 <div class="video-container">
@@ -277,25 +277,21 @@ display: none;
 </div>
 </div>
 </article>
-<article class="outreach-card">
-<img src="STEM_Ambassadors.jpg" alt="STEM Ambassador outreach activity" class="outreach-image">
-<div class="outreach-content">
+<article class="outreach-event">
+<img src="STEM_Ambassadors.jpg" alt="STEM Ambassador outreach activity" class="outreach-event-image">
+<div class="outreach-event-content">
 <h2>STEM Ambassador</h2>
-<p>STEM outreach visits to schools serving under-represented groups, with the aim of widening diversity and promoting STEM subjects.</p>
-<p>Delivered a talk to Year 12 and Year 13 students from under-represented groups, particularly girls, at Nottingham Girls Academy.</p>
-<p><strong>Talk title:</strong> <em>STEM in Life and Its Wide-Ranging Career Options &amp; Celebrating Women in STEM</em></p>
+<p>STEM outreach visits to schools of under-represented groups to widen diversity and promote subjects in STEM subjects.</p>
+<p>Delivered a talk to Year 12 and Year 13 students from under-represented groups, i.e. girls, at Nottingham Girls Academy.</p>
+<p><strong>Talk title:</strong> <em>STEM in Life and its Wide-Ranging Career Options &amp; Celebrating Women in STEM</em></p>
 <p><strong>Event:</strong> BIG Bang STEM All-Day Event.</p>
 <p><strong>Role:</strong> Present and explain student-built designs from the UCL Mechanical Engineering Department to high school students from under-represented groups, particularly girls.</p>
 </div>
 </article>
-<div class="outreach-card empty-card"></div>
-<div class="outreach-card empty-card"></div>
-<div class="outreach-card empty-card"></div>
-<div class="outreach-card empty-card"></div>
 </div>
 </main>
 <footer>
-<p>&copy; 2026 Dr. Lama Hamadeh</p>
+<p>&copy; 2026 Dr. Hamadeh</p>
 </footer>
 </body>
 </html>
